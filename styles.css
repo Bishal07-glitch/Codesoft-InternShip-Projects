@@ -1,0 +1,360 @@
+/* Reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Header */
+.header-section {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.header-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.menu-section ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu-section ul li {
+  margin: 0 10px;
+}
+
+.menu-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu-section ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Main Sections */
+.info-section {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.info-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-info {
+  width: 60%;
+}
+
+.text-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.text-info p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.imagebox img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.contact-buttons {
+  margin-top: 20px;
+}
+
+.contact-buttons .btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-buttons .btn:hover {
+  background-color: #555;
+}
+
+.aboutsection {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.aboutsection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.aboutmee {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  width: 60%;
+}
+
+.myimage img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.skills-section {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: calc(100% / 3 - 20px);
+  margin: 10px;
+}
+
+.skill p {
+  font-weight: bold;
+}
+
+.skillBar {
+  display: block;
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.htmlBar {
+  width: 90%;
+  background-color: #4CAF50;
+}
+
+.cssBar {
+  width: 70%;
+  background-color: #2196F3;
+}
+
+.jsBar {
+  width: 25%;
+  background-color: #f44336;
+}
+
+.phpBar {
+  width: 20%;
+  background-color: #9C27B0;
+}
+
+.ccpBar {
+  width: 25%;
+  background-color: #FF9800;
+}
+
+.mysqlBar {
+  width: 40%;
+  background-color: #009688;
+}
+
+.devOpsBar {
+  width: 10%;
+  background-color: #607D8B;
+}
+
+.education-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.education-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.education-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.details i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.details .detail-content {
+  flex: 1;
+}
+
+.details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.project-section {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.project-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px; /* Increased padding for better spacing */
+  text-align: center; /* Center-align content */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem; /* Larger font size */
+  margin-bottom: 30px; /* Increased bottom margin */
+  color: #333; /* Darker text color */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align items */
+}
+
+.contact-form span {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px; /* Space out the text */
+}
+
+.contact-details {
+  width: 100%;
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center align on larger screens */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.contact-details h3 {
+  font-size: 1.5rem; /* Larger font size */
+  color: #333; /* Darker text color */
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  margin-bottom: 15px; /* Increased bottom margin */
+  color: #666; /* Slightly lighter text color */
+}
+
+.contact-details form {
+  width: 100%;
+}
+
+.contact-details input,
+.contact-details textarea {
+  width: calc(100% - 20px); /* Adjusted width to account for padding */
+  padding: 10px;
+  margin-bottom: 15px; /* Increased bottom margin */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem; /* Normal font size */
+}
+
+.contact-details textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px; /* Minimum height for textarea */
+}
+
+.contact-details button {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px; /* Increased padding for better clickability */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Normal font size */
+  transition: background-color 0.3s ease;
+}
+
+.contact-details button:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
