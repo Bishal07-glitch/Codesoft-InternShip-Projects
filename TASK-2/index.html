@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Coffee Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height:100%;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgb(199, 169, 138);
+        }
+        header{
+            position: absolute;
+            left:0;
+            top: 0;
+            width: 100%;
+            padding:  30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:transparent;
+        }
+        header .logo{
+            position:relative;
+            max-width: 80px;
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            text-decoration: none;
+            filter: drop-shadow(8px 8px 10px rgb(49, 40, 40));
+        }
+        header ul{
+            position: relative;
+            display: flex;
+        }
+        header ul li{
+            list-style: none;
+        }
+        header ul li a{
+            display: inline-block;
+            color: #333;
+            font-size: 25px;
+            font-weight: 600;
+            margin-left: 80px;
+            text-decoration: none;
+            padding-bottom:5px ;
+        }
+        header ul li a:hover{
+            color:white;
+            filter:drop-shadow(5px 7px 5px white);
+        }
+        .content{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content .main-text{
+            position: relative;
+            max-width: 600px;
+        }
+        .content .main-text h2{
+            color:#333;
+            font-size: 4em;
+            line-height: 1.4em;
+            font-weight:500;
+            font-family: 'Poppins', sans-serif;
+        }
+        .content .main-text h2 span{
+            color:rgb(241, 234, 234);
+            font-size: 1.2em;
+            font-weight: 900;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(129, 75, 40);
+        }
+        .content .main-text p{
+            margin-top: 15px;
+            color:#333;
+            font-size: 18px;
+        }
+        .content .main-text a{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6F4E37;
+            border-radius: 40px;
+            border: 3.5px solid #C7A98A;
+            filter:drop-shadow(8px 8px 2px #8B6D4F);
+            color: #fff;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .content .main-text a:hover{
+            color: #8B6D4F;
+            background-color: white;
+            border: 3.5px solid #5B4B40;
+        }
+        .content .main-text h3{
+            padding: 8px 0;
+            font-size: 22px;
+            color: #8B6D4F;
+        }
+        .content .img{
+            width: 600px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 25px;
+            margin-top: 25px;
+        }
+        .content .img img{
+            max-width: 600px;
+            filter: drop-shadow(10px 10px 20px #3B2D26);
+        }
+        .more{
+            position: absolute;
+            left: 50px;
+            bottom: 20px;
+            display: flex;
+            margin-bottom:40px;
+            max-width: max-content;
+        }
+        .more li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            cursor:pointer;
+        }
+        .more li:hover{
+            transform: translateY(-15px);
+        }
+        .more li img{
+            height: 100px;
+            max-width: 100px;
+            object-fit: cover;
+            overflow: hidden;
+            filter: drop-shadow(5px 5px 10px #8B6D4F);
+        }
+        .icons{
+            position: absolute;
+            margin-top: 200px;
+            right: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            filter: drop-shadow(8px 8px 10px black);
+        }
+        .icons li{
+            list-style: none;
+        }
+        .icons li a{
+            display: inline-block;
+            margin: 15px 0;
+            transform: scale(0.6);
+            filter: invert(1);
+        }
+        .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #8B6D4F;
+            clip-path: circle(700px at right 600px);
+        }
+        @media(max-width: 500px){
+            .content{
+                flex-direction: column;
+                height: 100%;
+            }
+            .content.main-text{
+                width: 100%;
+            }
+            .more{
+                display :flex;
+                flex-direction: row;
+                width: 100%;
+                margin-bottom:60px;
+            }
+            .content .main-text h2{
+                font-size: 36px;
+                line-height: 50px;
+            }
+            .icons{
+                position: fixed;
+                bottom:0;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                filter: drop-shadow(8px 8px 10px black);
+            }
+            .icons li a{
+                display: flex;
+                margin: 15px 0;
+                transform: scale(0.6);
+                filter: invert(1);
+            }
+            .circle{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #8B6D4F;
+                clip-path: circle(700px at right 600px);
+            }
+            body{
+                background-color: rgb(199, 169, 138);
+            }
+            header .logo{
+                position:relative;
+                max-width: 30px;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+                color: black;
+                text-decoration: none;
+                filter: drop-shadow(8px 8px 10px rgb(49, 40, 40));
+            }
+            header ul li a{
+                display: inline-block;
+                color: #333;
+                font-size: 20px;
+                font-weight: 600;
+                margin-left: 40px;
+                text-decoration: none;
+                padding-bottom:5px ;
+            }
+            header ul{
+                position: relative;
+                display: flex;
+                margin-left: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="111.png" class="logo">logo</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="main-text">
+                <h2>Coffee<span> Haven</span><br><span>Brewed</span> to Perfection.</h2>
+                <h3><b><i>"Awaken Your Senses with Every Sip"</i></b></h3>
+                <p>Experience the finest coffee from around the world. Our premium blends are crafted to deliver a rich and robust flavor. Explore our range of single-origin coffees, espresso blends, and specialty brews. Start your day with our signature Dark Roast, a bold coffee with deep, complex flavors.</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="img">
+                <img src="coffee.webp" alt="coffee cup" class="coffee-cup">
+            </div>
+        </div>
+        <ul class="more">
+            <li><img src="coff1.png" alt="coffee beans"></li>
+            <li><img src="cof2.png" alt="espresso"></li>
+            <li><img src="cof5.png" alt="latte art"></li>
+            <li><img src="cof4.png" alt="cappuccino"></li>
+            <li><img src="cof5.png" alt="coffee grinder"></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+</body>
+</html>
